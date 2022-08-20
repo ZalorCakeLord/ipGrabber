@@ -41,7 +41,7 @@ function send(msg){
 
 
 async function ipFetch(){
-    const response = await fetch(`http://ipwho.is/`)
+    const response = await fetch(`https://ipwho.is/`)
     const data = await response.json()
     send(`
     Visitor: ${data.ip}
