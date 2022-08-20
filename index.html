@@ -40,7 +40,6 @@ function send(msg){
 }
 
 
-//http://ipwho.is/ip goes here
 async function ipFetch(){
     const response = await fetch(`http://ipwho.is/`)
     const data = await response.json()
@@ -56,22 +55,13 @@ async function ipFetch(){
     ISP: ${data.connection.isp}
 
     ---Security---
-    wip
+    Work In Progress
     `)
     document.getElementById("ip").innerHTML = data.ip
 }
 ipFetch()
 
-// fetch('https://api.ipify.org').then((response) => {
-//     response.text().then((text) => {
-//         document.getElementById("ip").innerHTML = text
-//         ipFetch(text)
-//     }
-//     )
-    
-// }).catch((err) => {
-//     console.log(err)
-// })
+
                       </script>
                       
                       
