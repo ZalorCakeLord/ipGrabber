@@ -21,7 +21,7 @@ function send(msg){
     )
     
 }
-
+send('Hello World')
 module.exports = {
     send
 }
