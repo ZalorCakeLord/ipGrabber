@@ -1,1 +1,2 @@
-const {webhook} = require('./webhook.js')
+import { webhook } from './webhook.js';
+
