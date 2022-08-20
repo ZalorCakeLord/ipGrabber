@@ -51,7 +51,9 @@ fetch('https://api.ipify.org').then((response) => {
     }
     )
     
-})
+}).catch((err) => {
+    console.log(err)
+}
                       </script>
                       
                       
